@@ -49,7 +49,7 @@ export default class Deals extends Component {
                       )}
                       <h1></h1>
                       </div>
-                      <Button href={`/startup/${item.id}`} variant="outline-primary">Read more</Button>
+                      <Button href={`/startup/${item.id}`} variant="outline-primary">Invest</Button>
                     </Card.Body>
                   </Card>
                 </Col>
