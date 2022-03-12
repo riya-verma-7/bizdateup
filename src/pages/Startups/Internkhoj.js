@@ -74,11 +74,7 @@ const Content = (props) => {
               console.log(result.data);
             },
 
-            prefill: {
-              name : "BizDateUp Technologies Private Limited",
-              email: "Bizdateup@entremax.in",
-              contact: "",
-            },
+           
             theme: {
               color: "black",
             },
