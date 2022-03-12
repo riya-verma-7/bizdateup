@@ -59,7 +59,7 @@ const Content = (props) => {
             key : "rzp_live_bM1HglWh7fuTPR",
             amount : amount.toString(),
             currency: currency,
-            name : "",
+            // name : "",
             description: "Investing Amount",
             order_id: order_id,
             handler: async function (response){
