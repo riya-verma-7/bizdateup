@@ -60,7 +60,7 @@ const Content = (props) => {
             amount : amount.toString(),
             currency: currency,
             name : "",
-            description: "Parking Fees",
+            description: "Investing Amount",
             order_id: order_id,
             handler: async function (response){
               const data = {
@@ -75,8 +75,8 @@ const Content = (props) => {
             },
 
             prefill: {
-              name : "",
-              email: "",
+              name : "BizDateUp Technologies Private Limited",
+              email: "Bizdateup@entremax.in",
               contact: "",
             },
             theme: {
