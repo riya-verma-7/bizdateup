@@ -70,17 +70,11 @@ const Login = () => {
             type="email"
             name="user_email"
             placeholder="Enter registered Email "
-            ref={register({
-              required: "Email is required.",
-              pattern: {
-                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                message: "Email is not valid.",
-              },
-            })}
-            className={`${errors.user_email ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            className={`${errors ? "input-error" : ""}`}
           />
-          {errors.user_email && (
-            <p className="errorMsg">{errors.user_email.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -90,17 +84,11 @@ const Login = () => {
             type="password"
             name="user_password"
             placeholder="Enter your password"
-            ref={register({
-              required: "Password is required.",
-              minLength: {
-                value: 6,
-                message: "Password should have at-least 6 characters.",
-              },
-            })}
-            className={`${errors.user_password ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            className={`${errors ? "input-error" : ""}`}
           />
-          {errors.user_password && (
-            <p className="errorMsg">{errors.user_password.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 

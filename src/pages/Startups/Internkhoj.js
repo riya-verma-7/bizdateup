@@ -121,11 +121,15 @@ const Content = (props) => {
   }
    
   }
+
+ 
   const startup = details.find((st) => st.id === props.id);
   function MyVerticallyCenteredModal(props) {
     
     return (
-      <Modal
+    
+     
+     <Modal
         {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -134,6 +138,7 @@ const Content = (props) => {
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             Enter Details
+            
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

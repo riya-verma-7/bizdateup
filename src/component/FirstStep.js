@@ -64,6 +64,7 @@ const FirstStep = (props) => {
         animate={{ x: 0 }}
         transition={{ stiffness: 150 }}
       >
+       
         <Form.Group controlId="first_name">
           <Form.Label>First Name</Form.Label>
           <Form.Control
@@ -71,17 +72,12 @@ const FirstStep = (props) => {
             name="first_name"
             placeholder="Enter your First name"
             autoComplete="off"
-            ref={register({
-              required: "First name is required.",
-              pattern: {
-                value: /^[a-zA-Z]+$/,
-                message: "First name should contain only characters.",
-              },
-            })}
-            className={`${errors.first_name ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+           
+            className={`${errors} ? "input-error" : ""`}
           />
-          {errors.first_name && (
-            <p className="errorMsg">{errors.first_name.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -92,17 +88,12 @@ const FirstStep = (props) => {
             name="last_name"
             placeholder="Enter your Last name"
             autoComplete="off"
-            ref={register({
-              required: "Last name is required.",
-              pattern: {
-                value: /^[a-zA-Z]+$/,
-                message: "Last name should contain only characters.",
-              },
-            })}
-            className={`${errors.last_name ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            
+            className={`${errors ? "input-error" : ""}`}
           />
-          {errors.last_name && (
-            <p className="errorMsg">{errors.last_name.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
         <Form.Group controlId="user_email">
@@ -112,17 +103,12 @@ const FirstStep = (props) => {
             name="user_email"
             placeholder="Enter your Email address"
             autoComplete="off"
-            ref={register({
-              required: "Email is required.",
-              pattern: {
-                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                message: "Email is not valid.",
-              },
-            })}
-            className={`${errors.user_email ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            
+            className={`${errors ? "input-error" : ""}`}
           />
-          {errors.user_email && (
-            <p className="errorMsg">{errors.user_email.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -133,17 +119,12 @@ const FirstStep = (props) => {
             name="user_password"
             placeholder="Choose a Password"
             autoComplete="off"
-            ref={register({
-              required: "Password is required.",
-              minLength: {
-                value: 6,
-                message: "Password should have at-least 6 characters.",
-              },
-            })}
-            className={`${errors.user_password ? "input-error" : ""}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            
+            className={`${errors ? "input-error" : ""}`}
           />
-          {errors.user_password && (
-            <p className="errorMsg">{errors.user_password.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 

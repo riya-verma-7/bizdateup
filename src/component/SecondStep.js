@@ -145,17 +145,11 @@ const SecondStep = (props) => {
             name="phone"
             placeholder="Enter your mobile number"
             autoComplete="off"
-            ref={register({
-              required: 'Mobile number is required.',
-              pattern: {
-                value: /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i,
-                message: 'Mobile number should be of 10 digits'
-              }
-            })}
-            className={`${errors.phone ? 'input-error' : ''}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            className={`${errors ? 'input-error' : ''}`}
           />
-          {errors.phone && (
-            <p className="errorMsg">{errors.phone.message}</p>
+          {errors&& (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -166,17 +160,11 @@ const SecondStep = (props) => {
             name="pan"
             placeholder="Enter your PAN number"
             autoComplete="off"
-            ref={register({
-              required: 'PAN number is required.',
-              pattern: {
-                value:  /([A-Z]){5}([0-9]){4}([A-Z]){1}$/,
-                message: 'PAN number is invalid'
-              }
-            })}
-            className={`${errors.pan ? 'input-error' : ''}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            className={`${errors ? 'input-error' : ''}`}
           />
-          {errors.pan && (
-            <p className="errorMsg">{errors.pan.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -187,17 +175,12 @@ const SecondStep = (props) => {
             name="aadhar"
             placeholder="XXXX XXXX XXXX"
             autoComplete="off"
-            ref={register({
-              required: 'aadhar number is required.',
-              pattern: {
-                value: /^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/,
-                message: 'aadhar is not a valid one'
-              }
-            })}
-            className={`${errors.aadhar ? 'input-error' : ''}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            
+            className={`${errors ? 'input-error' : ''}`}
           />
-          {errors.aadhar && (
-            <p className="errorMsg">{errors.aadhar.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
 
@@ -208,17 +191,11 @@ const SecondStep = (props) => {
             name="age"
             placeholder="age"
             autoComplete="off"
-            ref={register({
-              required: 'Age is required.',
-              pattern: {
-                value: /^\d+$/,
-                message: 'Should be number'
-              }
-            })}
-            className={`${errors.age ? 'input-error' : ''}`}
+            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            className={`${errors ? 'input-error' : ''}`}
           />
-          {errors.age && (
-            <p className="errorMsg">{errors.age.message}</p>
+          {errors && (
+            <p className="errorMsg">{errors}</p>
           )}
         </Form.Group>
         {/* <Form.Group controlId="designation">
