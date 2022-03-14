@@ -46,7 +46,7 @@ const Content = (props) => {
           return
         }
 
-        const result = await axios.post("http://localhost:5000/payOnline", {totalAmount:totalAmount})
+        const result = await axios.post("https://bizzdateupjs.herokuapp.com/payOnline", {totalAmount:totalAmount})
 
         if(!result){
           alert("Server error. Are you online?")
@@ -70,7 +70,7 @@ const Content = (props) => {
                     razorpaySignature: response.razorpay_signature,
               }
 
-              const result = await axios.post("http://localhost:5000/payOnline", data);
+              const result = await axios.post("https://bizzdateupjs.herokuapp.com/payOnline", data);
               console.log(result.data);
             },
 
@@ -96,7 +96,7 @@ const Content = (props) => {
    
     else{
       console.log(data)
-      const response = await axios.post("http://localhost:5000/invest", data)
+      const response = await axios.post("https://bizzdateupjs.herokuapp.com/invest", data)
       console.log(response.data)
       
       Swal.fire({
