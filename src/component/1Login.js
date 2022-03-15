@@ -70,7 +70,7 @@ const Login = () => {
             type="email"
             name="user_email"
             placeholder="Enter registered Email "
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('user_email',{required: "First name is required.", message :"First name should contain only characters." })}
             className={`${errors ? "input-error" : ""}`}
           />
           {errors && (
@@ -84,7 +84,7 @@ const Login = () => {
             type="password"
             name="user_password"
             placeholder="Enter your password"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('user_password',{required: "First name is required.", message :"First name should contain only characters." })}
             className={`${errors ? "input-error" : ""}`}
           />
           {errors && (

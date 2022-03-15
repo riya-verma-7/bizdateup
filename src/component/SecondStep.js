@@ -145,7 +145,7 @@ const SecondStep = (props) => {
             name="phone"
             placeholder="Enter your mobile number"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('phone',{required: "First name is required.", message :"First name should contain only characters." })}
             className={`${errors ? 'input-error' : ''}`}
           />
           {errors&& (
@@ -160,7 +160,7 @@ const SecondStep = (props) => {
             name="pan"
             placeholder="Enter your PAN number"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('pan',{required: "First name is required.", message :"First name should contain only characters." })}
             className={`${errors ? 'input-error' : ''}`}
           />
           {errors && (
@@ -175,7 +175,7 @@ const SecondStep = (props) => {
             name="aadhar"
             placeholder="XXXX XXXX XXXX"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('aadhar',{required: "First name is required.", message :"First name should contain only characters." })}
             
             className={`${errors ? 'input-error' : ''}`}
           />
@@ -191,7 +191,7 @@ const SecondStep = (props) => {
             name="age"
             placeholder="age"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('age',{required: "First name is required.", message :"First name should contain only characters." })}
             className={`${errors ? 'input-error' : ''}`}
           />
           {errors && (

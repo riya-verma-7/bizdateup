@@ -160,9 +160,10 @@ const ThirdStep = (props) => {
 
       Swal.fire("Awesome!", "You're successfully registered!", "success").then(
         (result) => {
-          if (result.isConfirmed || result.isDismissed) {
-            props.resetUser();
-            history.push("/Deals");
+          if (result.isConfirmed) {
+            // props.resetUser();
+            props.history.push('/')
+            console.log("Signed up")
           }
         }
       );

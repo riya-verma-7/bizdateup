@@ -88,7 +88,7 @@ const FirstStep = (props) => {
             name="last_name"
             placeholder="Enter your Last name"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('last_name',{required: "First name is required.", message :"First name should contain only characters." })}
             
             className={`${errors ? "input-error" : ""}`}
           />
@@ -103,7 +103,7 @@ const FirstStep = (props) => {
             name="user_email"
             placeholder="Enter your Email address"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('user_email',{required: "First name is required.", message :"First name should contain only characters." })}
             
             className={`${errors ? "input-error" : ""}`}
           />
@@ -119,7 +119,7 @@ const FirstStep = (props) => {
             name="user_password"
             placeholder="Choose a Password"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register('user_password',{required: "First name is required.", message :"First name should contain only characters." })}
             
             className={`${errors ? "input-error" : ""}`}
           />
