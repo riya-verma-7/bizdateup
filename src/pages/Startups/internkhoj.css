@@ -1,0 +1,58 @@
+.submitbtn {
+    background-color: rgb(32, 32, 84) !important;
+    color: white;
+}
+
+.titlestyle {
+    font-weight: bold !important;
+}
+
+.form-control {
+    background-color: rgba(243, 243, 243, 0.918) !important;
+    font-weight: bold !important;
+}
+
+.label {
+    font-weight: bold !important;
+}
+
+table,
+td {
+    border: 3px solid rgba(230, 225, 225, 0.918);
+    font-weight: bold;
+}
+
+.headerlayout {
+    background-color: rgba(230, 225, 225, 0.918);
+}
+
+td {
+    padding: 3%;
+    width: 50%;
+}
+
+th {
+    padding: 3%;
+}
+
+.fontbold {
+    font-weight: bold;
+}
+
+.totalamount {
+    color: rgba(180, 175, 175, 0.918);
+}
+
+.sweet-alert-button {
+    background-color: rgb(32, 32, 84);
+    color: white;
+    /* display: block !important; */
+    padding: 10px;
+    width: 180px;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin: 2%; */
+    /* width: 450px; */
+    border-radius: 10px;
+}

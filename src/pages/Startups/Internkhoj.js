@@ -11,6 +11,8 @@ import swal from "sweetalert";
 import Swal from 'sweetalert2';
 // import { BASE_API_URL } from "../utils/constants";
 
+//for modal window 
+import "./internkhoj.css"
 
 // Importing Section
 import Navbar from "../../component/Navbar/NavBar";
@@ -104,7 +106,57 @@ const Content = (props) => {
         showDenyButton: true,
         confirmButtonText: "Pay Now",
         denyButtonText: `Edit Details`,
-        html: `<div class = " w-96 mx-auto text-center mt-5 mb-3">Amount to pay: ${data.amount} <br> 2% Convenience Fee: ${response.data.convenienceFees} <br>18% GST : ${response.data.gst} <br>10% TDS:  ${response.data.tds} <br>Total Amount to pay:  ${response.data.totalAmount}</div>`,
+        buttonsStyling: false,
+  customClass: {
+    confirmButton: 'sweet-alert-button',
+    denyButton:'sweet-alert-button'
+
+  },
+        html: `<div class = " w-96 mx-auto text-center mt-5 mb-3">
+        <table id="table"  class="mx-auto text-center tablelayout">
+        <thead class="headerlayout">
+            <tr>
+                <th>Particulars</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Investment Amount</td>
+                <td>&#8377 ${data.amount}</td>
+            </tr>
+            <tr>
+                <td>Convenience Fee (2%)</td>
+                <td>&#8377 ${response.data.convenienceFees}</td>
+               
+            </tr>
+            <tr>
+                <td>GST (18%) </td>
+                <td>&#8377 ${response.data.gst}</td>
+                
+            </tr>
+            <tr>
+                <td>TDS (10%) </td>
+                <td>&#8377 ${response.data.tds}</td>
+                
+            </tr>
+            <tr>
+                <td>Total </td>
+                <td>&#8377  ${response.data.totalAmount}</td>
+                
+            </tr>
+</tbody>
+</table>
+
+<div class="mt-4 fontbold">
+<span class="totalamount">
+AMOUNT TO BE PAID
+</span> : &#8377 ${response.data.totalAmount}
+</div>
+
+        <hr>
+        
+        </div>`,
         button: "Confirm!",
       }).then((result)=>{
           if(result.isConfirmed){
@@ -132,12 +184,12 @@ const Content = (props) => {
      
      <Modal
         {...props}
-        size="lg"
+        size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title id="contained-modal-title-vcenter " className="titlestyle">
             Enter Details
             
           </Modal.Title>
@@ -159,7 +211,8 @@ const Content = (props) => {
                   />
                 </Form.Group>
               </Col>
-           
+           </Row>
+           <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="productName">
                   <Form.Label>Product Name : </Form.Label>
@@ -177,8 +230,9 @@ const Content = (props) => {
               <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="amount">
-                  <Form.Label>Amount : </Form.Label>
+                  <Form.Label >Amount : </Form.Label>
                   <Form.Control
+                  className="inputstyle"
                     type="number"
                     placeholder="Enter amount"
                    name = "amount"
@@ -189,8 +243,8 @@ const Content = (props) => {
             </Row>
 
             <Modal.Footer>
-              <Button variant="primary" type = "submit" >
-                Submit
+              <Button className="btn btn-block btn-rounded submitbtn" type = "submit" >
+                SUBMIT
               </Button>
             </Modal.Footer>
           </Form>

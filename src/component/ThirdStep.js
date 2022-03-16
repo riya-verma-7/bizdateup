@@ -161,7 +161,7 @@ const ThirdStep = (props) => {
       Swal.fire("Awesome!", "You're successfully registered!", "success").then(
         (result) => {
           if (result.isConfirmed) {
-            // props.resetUser();
+            props.resetUser();
             props.history.push('/')
             console.log("Signed up")
           }
