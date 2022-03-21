@@ -253,20 +253,20 @@ AMOUNT TO BE PAID
     );
   }
 
-  const items = [
-    // { id: 1, idnm: "home", navheading: "Home" },
-    // { id: 3, idnm: "services", navheading: "Services" },
-    // { id: 4, idnm: "pricing", navheading: "Pricing" },
-    // { id: 5, idnm: "team", navheading: "Team" },
-    // { id: 6, idnm: "clients", navheading: "Clients" },
-    // { id: 7, idnm: "contact", navheading: "Contact" },
-  ];
+  // const items = [
+  //   { id: 1, idnm: "home", navheading: "Home" },
+  //   { id: 3, idnm: "services", navheading: "Services" },
+  //   { id: 4, idnm: "pricing", navheading: "Pricing" },
+  //   { id: 5, idnm: "team", navheading: "Team" },
+  //   { id: 6, idnm: "clients", navheading: "Clients" },
+  //   { id: 7, idnm: "contact", navheading: "Contact" },
+  // ];
 
-  const [navItems, setNavItems] = useState(items);
-  const [pos, setPos] = useState(document.documentElement.scrollTop);
-  const [imglight, setImgLight] = useState(false);
-  const [navClass, setNavClass] = useState("");
-  const [fixTop, setFixTop] = useState(true);
+  // const [navItems, setNavItems] = useState(items);
+  // const [pos, setPos] = useState(document.documentElement.scrollTop);
+  // const [imglight, setImgLight] = useState(false);
+  // const [navClass, setNavClass] = useState("");
+  // const [fixTop, setFixTop] = useState(true);
   const [modalShow, setModalShow] = useState(false);
 
   //number of pages in PDF
@@ -277,6 +277,8 @@ AMOUNT TO BE PAID
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
+
+  
 
   // const ID = '1';
   // const startup = details.find((st) => st.id === props.id);
@@ -854,15 +856,30 @@ AMOUNT TO BE PAID
 };
 
 const Startups = ({ match }) => {
+
+  const items = [
+    // { id: 1, idnm: "home", navheading: "Home" },
+    // { id: 3, idnm: "services", navheading: "Services" },
+    // { id: 4, idnm: "pricing", navheading: "Pricing" },
+    // { id: 5, idnm: "team", navheading: "Team" },
+    // { id: 6, idnm: "clients", navheading: "Clients" },
+    // { id: 7, idnm: "contact", navheading: "Contact" },
+  ];
+
+  const [navItems, setNavItems] = useState(items);
+  const [pos, setPos] = useState(document.documentElement.scrollTop);
+  const [imglight, setImgLight] = useState(false);
+  const [navClass, setNavClass] = useState("");
+  const [fixTop, setFixTop] = useState(true);
   return (
     <React.Fragment>
-      {/*       
+            
       <Navbar
-            navItems={this.state.navItems}
-            navClass={this.state.navClass}
-            imglight={this.state.imglight}
-            top={this.state.fixTop}
-          /> */}
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
       <Content id={match.params.id} />
 
       {/* Importing Clients */}
