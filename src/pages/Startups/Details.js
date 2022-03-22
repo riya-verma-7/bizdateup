@@ -1,12 +1,10 @@
-import Img1 from '../../assets/images/users/img.jpg';
-import Kfimg1 from '../../assets/images/testi-img/img-1.png';
-import Kfimg2 from '../../assets/images/testi-img/img-2.png';
-import Kfimg3 from '../../assets/images/testi-img/img-3.png';
-import Kfimg4 from '../../assets/images/testi-img/img-4.png';
+import Img1 from '../../assets/images/startup/brewedleaf/thumbnail.jpg';
 import Logo from '../../assets/images/testi-img/img-4.png';
 import Founder from '../../assets/images/testi-img/img-4.png';
-import Pitch from '../../assets/images/startup/brewed.pdf'
-import Download from '../../assets/images/startup/brewedleaf.zip';
+import Pitch1 from '../../assets/images/startup/brewedleaf/pitch.pdf'
+import Pitch2 from '../../assets/images/startup/bidwheelz/pitch.pdf'
+import Download1 from '../../assets/images/startup/brewedleaf/duediligence.zip';
+import Download2 from '../../assets/images/startup/bidwheelz/duediligence.zip';
 
 const details = [
     {
@@ -30,23 +28,23 @@ const details = [
         twitter: "https://www.twitter.com/",
         gmail: "https://www.facebook.com/",
         instagram: "https://www.instagram.com/",
-        file: Download,
+        file: Download1,
         
 
 
         duediligence: "File",
         keyfeature1: "Strong Connections", 
-        kfimg1: Kfimg1,
+        
         keyfeature2: "Profitable Since Inception",
-        kfimg2: Kfimg2,
+        
         keyfeature3: "Motivated Team",
-        kfimg3: Kfimg3,
+        
         keyfeature4: "Scalable",
-        kfimg4: Kfimg4,
+        
 
         // pitchdeck
 
-        pitch: Pitch,
+        pitch: Pitch1,
         link: "www.internkhoj.com",
 
         // fundamentals
@@ -66,6 +64,68 @@ const details = [
 
         foundername1: 'Rajat Jajoo',
         foundernamerole1: 'CoFounder & COO',
+        founderdesc1: 'Hotel Management graduate with exposure to on ground business management having worked for 2 years',
+        founderimg: Founder,
+        linkedin: 'https://www.instagram.com/jeetmchandan/',
+    },
+
+    {
+        id: '2',
+        title: "Bid Wheelz",
+        img: Img1,
+        logo: Logo,
+        description: 'Bidwheelz is a B2B and B2C transparent auction aggregator platform which helps people buy and sell vehicles through AI inspection models. The company provides all different types of services related to automobiles such as Sale, Purchase, Insurance, Loan, Servicing and Accessories which a customer would require during their vehicle use under one roof.',
+        shortdescription: 'Bidwheelz is a Marketplace for buying and selling resale vehicles through Transparent Live Bidding.',
+        percentageRaised: '20%', 
+        tag: [
+          "Automobile","E-Commerce",     
+        ],
+        youtubelink: "https://youtu.be/UVCP4bKy9Iw",
+         icon: 'mdi-account-group',
+        icon2: 'mdi-lightbulb-on',
+        icon3: 'mdi-email-lock',
+        green: 'mdi-checkbox-marked-circle',
+        due: 'mdi-file-download',
+        facebook: "https://www.facebook.com/",
+        twitter: "https://www.twitter.com/",
+        gmail: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        file: Download2,
+        
+
+
+        duediligence: "File",
+        keyfeature1: "Done 1770 auction in last 2 years. ", 
+        
+        keyfeature2: "Signed up 350 dealers in Pune",
+        
+        keyfeature3: "Pan India Contract of ICICI Bank, Indusind Bank",
+        
+        keyfeature4: "Scalable",
+        
+
+        // pitchdeck
+
+        pitch: Pitch2,
+        link: "https://www.bidwheelz.com/",
+
+        // fundamentals
+        
+        minimuminvest: '5000',
+        valuation: '20 crore',
+        target: '1 crore',
+        socials: [
+            "fjebof", 'efheofuhne'
+        ],
+
+        
+        // Team 
+        foundername: 'Nakul Khandelwal',
+        foundernamerole: 'Co-founder and CEO',
+        founderdesc: 'Hotel Management graduate with 3 years of hospitality experience at Hotel Royal Orchid.',
+
+        foundername1: 'Sameer Tilak',
+        foundernamerole1: 'Co-founder and CTO',
         founderdesc1: 'Hotel Management graduate with exposure to on ground business management having worked for 2 years',
         founderimg: Founder,
         linkedin: 'https://www.instagram.com/jeetmchandan/',

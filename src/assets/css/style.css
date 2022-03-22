@@ -19,6 +19,7 @@
 12.footer
 13.responsive
 14. signup css
+15.Css for scroll
 
 *****************************************/
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap");
@@ -1762,3 +1763,51 @@ textarea.form-control {
   background-color: #e2e6e7;
   padding: 1.7rem 1.4rem;
 }
+
+
+/*-------------------------------------------------------------*/
+/*   Privacy policy  */
+
+.sidebar {
+  position: fixed;
+  width: 20%;
+  /* background-color: white; */
+  height: 600px;
+  margin-top: 5.7rem;
+  /* box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25); */
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 10;
+  margin-bottom: 340px;
+}
+
+.listitem {
+  padding: 1%;
+  margin: 1rem;
+}
+
+li a:hover {
+  text-decoration: none;
+  color: rgb(32, 32, 84);
+}
+
+ul {
+  list-style: none;
+}
+
+.linkstyle {
+  color: #000;
+  font-weight: bold;
+}
+
+
+/* .sidebarHr {
+  border: none;
+  width: 100%;
+  height: 52px;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.25);
+  margin: -50px auto 10px;
+} */

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -6,6 +6,8 @@ import swal from "sweetalert";
 import axios from "axios";
 
 const FirstStep = (props) => {
+  const [viewPwd, setViewPwd] = useState(false);
+
   const { user } = props;
   const { register, handleSubmit, errors } = useForm({
     defaultValues: {
@@ -32,7 +34,7 @@ const FirstStep = (props) => {
   //     {
   //       swal({
   //         title: "Registration Sucessfull",
-  //         icon: `success`,  
+  //         icon: `success`,
   //         button: "Okay!!",
   //       }).then(function () {
   //         // window.location = "";
@@ -42,11 +44,11 @@ const FirstStep = (props) => {
   //     {
   //       swal({
   //         title: "OTP does not match",
-  //         icon: `error`,  
+  //         icon: `error`,
   //         button: "Okay!!",
   //       })
   //     }
-     
+
   //   })
   // };
 
@@ -64,7 +66,6 @@ const FirstStep = (props) => {
         animate={{ x: 0 }}
         transition={{ stiffness: 150 }}
       >
-       
         <Form.Group controlId="first_name">
           <Form.Label>First Name</Form.Label>
           <Form.Control
@@ -72,13 +73,13 @@ const FirstStep = (props) => {
             name="first_name"
             placeholder="Enter your First name"
             autoComplete="off"
-            {...register('first_name',{required: "First name is required.", message :"First name should contain only characters." })}
-           
+            {...register("first_name", {
+              required: "First name is required.",
+              message: "First name should contain only characters.",
+            })}
             className={`${errors} ? "input-error" : ""`}
           />
-          {errors && (
-            <p className="errorMsg">{errors}</p>
-          )}
+          {errors && <p className="errorMsg">{errors}</p>}
         </Form.Group>
 
         <Form.Group controlId="last_name">
@@ -88,13 +89,13 @@ const FirstStep = (props) => {
             name="last_name"
             placeholder="Enter your Last name"
             autoComplete="off"
-            {...register('last_name',{required: "First name is required.", message :"First name should contain only characters." })}
-            
+            {...register("last_name", {
+              required: "First name is required.",
+              message: "First name should contain only characters.",
+            })}
             className={`${errors ? "input-error" : ""}`}
           />
-          {errors && (
-            <p className="errorMsg">{errors}</p>
-          )}
+          {errors && <p className="errorMsg">{errors}</p>}
         </Form.Group>
         <Form.Group controlId="user_email">
           <Form.Label>Email</Form.Label>
@@ -103,32 +104,48 @@ const FirstStep = (props) => {
             name="user_email"
             placeholder="Enter your Email address"
             autoComplete="off"
-            {...register('user_email',{required: "First name is required.", message :"First name should contain only characters." })}
-            
+            {...register("user_email", {
+              required: "First name is required.",
+              message: "First name should contain only characters.",
+            })}
             className={`${errors ? "input-error" : ""}`}
           />
-          {errors && (
-            <p className="errorMsg">{errors}</p>
-          )}
+          {errors && <p className="errorMsg">{errors}</p>}
         </Form.Group>
 
         <Form.Group controlId="user_password">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="password"
+            type={viewPwd ? "text" : "password"}
             name="user_password"
             placeholder="Choose a Password"
             autoComplete="off"
-            {...register('user_password',{required: "First name is required.", message :"First name should contain only characters." })}
-            
+            {...register("user_password", {
+              required: "First name is required.",
+              message: "First name should contain only characters.",
+            })}
             className={`${errors ? "input-error" : ""}`}
           />
-          {errors && (
-            <p className="errorMsg">{errors}</p>
-          )}
+          <div
+            style={{
+              position: "absolute",
+              right: "1.4rem",
+              top: "18.6rem",
+              fontSize: "15px",
+              cursor: "pointer",
+            }}
+          >
+            <i
+              onClick={() => {
+                setViewPwd(!viewPwd);
+              }}
+              className={`fa ${viewPwd ? "fa-eye-slash" : "fa-eye"}`}
+            ></i>
+          </div>
+          {errors && <p className="errorMsg">{errors}</p>}
         </Form.Group>
 
-        <Button variant="primary" type="submit" >
+        <Button variant="primary" type="submit">
           Next
         </Button>
       </motion.div>

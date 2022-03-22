@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../src/styles.scss';
 import Privacy from "../component/Privacy";
 
-class ContactUs extends Component {
+
+class Privacypage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,10 +57,12 @@ class ContactUs extends Component {
           <Privacy />
 
           {/* Importing Footer */}
-          <Footer />
+          <div style={{marginLeft:"25%"}}>
+          <Footer/>
+          </div>
       </React.Fragment>
     );
   }
 }
-export default ContactUs;
+export default Privacypage;
 

@@ -15,6 +15,7 @@ const Login = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [userDetails, setUserDetails] = useState("");
+  const [viewPwd, setViewPwd] = useState(false);
   let history = useHistory();
   const onSubmit = async (data) => {
     console.log(data);
@@ -81,15 +82,33 @@ const Login = () => {
         <Form.Group controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="password"
+            
+            type={viewPwd ? "text" : "password"}
             name="user_password"
             placeholder="Enter your password"
-            {...register('user_password',{required: "First name is required.", message :"First name should contain only characters." })}
+            {...register("user_password", {
+              required: "First name is required.",
+              message: "First name should contain only characters.",
+            })}
             className={`${errors ? "input-error" : ""}`}
           />
-          {errors && (
-            <p className="errorMsg">{errors}</p>
-          )}
+           <div
+            style={{
+              position: "absolute",
+              right: "1.4rem",
+              top: "13.4rem",
+              fontSize: "15px",
+              cursor: "pointer",
+            }}
+          >
+            <i
+              onClick={() => {
+                setViewPwd(!viewPwd);
+              }}
+              className={`fa ${viewPwd ? "fa-eye-slash" : "fa-eye"}`}
+            ></i>
+          </div>
+          {errors && <p className="errorMsg">{errors}</p>}
         </Form.Group>
 
         

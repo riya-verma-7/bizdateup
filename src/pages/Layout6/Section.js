@@ -37,7 +37,7 @@ class Section extends Component {
                       <img src={HomeUrl} height="15" alt="" />
                       <h1 className="home-title mt-4"> Invest in startups<br /> you trust.</h1>
                       <p className="text-muted mt-4 f-20">Start investing now so that you can be
-part of the Next Big thing.</p>
+part of the next big thing.</p>
                       <div className="mt-4 pt-2">
                         <Link to="/Invest" className="btn btn-primary mr-3">Learn More</Link>
                         <Link to="#" className="video-play-icon text-dark" onClick={this.openModal}>

@@ -10,7 +10,7 @@ import SignUp from "../src/component/SignUp";
 import ForgotPassword from "../src/component/ForgotPassword";
 import ContactUs from "./pages/ContactUs";
 import Deal from "../src/pages/Deals";
-import Privacy from '../src/pages/Privacy';
+import Privacypage from '../src/pages/Privacy';
 import Terms from '../src/pages/Terms';
 import Risk from '../src/pages/Risk';
 import Refundpolicy from '../src/pages/Refundpolicy';
@@ -26,26 +26,26 @@ import Profile from "../src/component/Profile";
 //   BrowserRouter as Router,
 // } from "react-router-dom";
 const routes = [
-  { path: "/About", component: Layout2 },
-  { path: "/Match", component: Layout3 },
-  { path: "/Invest", component: Layout4 },
-  { path: "/Layout5", component: Layout5 },
-  { path: "/Layout6", component: Layout6 },
-  { path: "/Login", component: Login },
-  { path: "/SignUp", component: SignUp },
-  { path: "/ForgotPassword", component: ForgotPassword },
-  { path: "/ContactUs", component: ContactUs },
-  { path: "/Privacy", component: Privacy },
-  { path: "/Terms", component: Terms },
-  { path: "/Deals", component: Deal},
-  { path: "/Risk", component: Risk},
-  { path: "/Refundpolicy", component: Refundpolicy},
-  { path: "/Dashboard", component: Dashboard},
-  { path: "/Internkhoj", component: Startups},
-  { path: "/startup/:id", component: Startups},
-  { path: "/Profile", component: Profile },
-  { path: "/", component: Layout1 },
-  
+    { path: "/About", component: Layout2 },
+    { path: "/Match", component: Layout3 },
+    { path: "/Invest", component: Layout4 },
+    { path: "/Layout5", component: Layout5 },
+    { path: "/Layout6", component: Layout6 },
+    { path: "/Login", component: Login },
+    { path: "/SignUp", component: SignUp },
+    { path: "/ForgotPassword", component: ForgotPassword },
+    { path: "/ContactUs", component: ContactUs },
+    { path: "/Privacy", component: Privacypage },
+    { path: "/Terms", component: Terms },
+    { path: "/Deals", component: Deal },
+    { path: "/Risk", component: Risk },
+    { path: "/Refundpolicy", component: Refundpolicy },
+    { path: "/Dashboard", component: Dashboard },
+    { path: "/Internkhoj", component: Startups },
+    { path: "/startup/:id", component: Startups },
+    { path: "/Profile", component: Profile },
+    { path: "/", component: Layout1 },
+
 ];
 
 // const Routes =()=>{
