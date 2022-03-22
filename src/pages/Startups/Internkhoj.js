@@ -278,6 +278,8 @@ AMOUNT TO BE PAID
     setNumPages(numPages);
   }
 
+  
+
   // const ID = '1';
   // const startup = details.find((st) => st.id === props.id);
   return (
@@ -854,6 +856,10 @@ AMOUNT TO BE PAID
 };
 
 const Startups = ({ match }) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1f6371859abd207b413e16c228df56ba32e41a2d
   const items = [
     // { id: 1, idnm: "home", navheading: "Home" },
     // { id: 3, idnm: "services", navheading: "Services" },
@@ -872,11 +878,19 @@ const Startups = ({ match }) => {
     <React.Fragment>
             
       <Navbar
+<<<<<<< HEAD
            navItems={navItems}
            navClass={navClass}
            imglight={imglight}
            top={fixTop}
          />
+=======
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+>>>>>>> 1f6371859abd207b413e16c228df56ba32e41a2d
       <Content id={match.params.id} />
 
       {/* Importing Clients */}
