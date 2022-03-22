@@ -86,13 +86,13 @@ const Team2 = () => {
   return (
    <>
        
-        <section className="section pt-0" id="team">
+        {/* <section className="section pt-0" id="team">
           <Container>
             <Row>
               <Col lg="12">
                 <div className="title-box text-center">
                   <h3 className="title-heading mt-4">Know the team</h3>
-                  <p className="text-muted f-17 mt-3">BizDateUp operates on the notion that great startups are run by a great team. And, thankfully we have one. You might want to take a look:</p>
+                  <p className="text-muted f-17 mt-3">BizDateUp operates on the notion that great startups are run by a great team.<br /> And, thankfully we have one. You might want to take a look:</p>
                   <img src={HomeUrl} height="15" className="mt-3" alt="" />
                 </div>
               </Col>
@@ -122,7 +122,7 @@ team.map(({id,img,role,name,description})=>(
 </Col>
             </Row>
             </Container>
-            </section>
+            </section> */}
 
             <section className="section bg-light bg-cta">
          <Container>

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-
+import Navbar from "../component/Navbar/NavBar";
 
 const SecondStep = (props) => {
   //const [designation, setDesignation] = useState([]);
@@ -22,6 +22,22 @@ const SecondStep = (props) => {
       aadhar: user.aadhar,
     }
   });
+
+  const items = [
+    // { id: 1, idnm: "home", navheading: "Home" },
+    // { id: 3, idnm: "services", navheading: "Services" },
+    // { id: 4, idnm: "pricing", navheading: "Pricing" },
+    // { id: 5, idnm: "team", navheading: "Team" },
+    // { id: 6, idnm: "clients", navheading: "Clients" },
+    // { id: 7, idnm: "contact", navheading: "Contact" },
+  ];
+
+  const [navItems, setNavItems] = useState(items);
+  const [pos, setPos] = useState(document.documentElement.scrollTop);
+  const [imglight, setImgLight] = useState(false);
+  const [navClass, setNavClass] = useState("");
+  const [fixTop, setFixTop] = useState(true);
+
 
   let designation = [
     {
@@ -131,7 +147,14 @@ const SecondStep = (props) => {
   };
 
   return (
-    <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
+    <div>
+       <Navbar
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+         <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
       <motion.div
         className="col-md-6 offset-md-3"
         initial={{ x: '-100vw' }}
@@ -241,6 +264,8 @@ const SecondStep = (props) => {
         </Button>
       </motion.div>
     </Form>
+    </div>
+   
   );
 };
 

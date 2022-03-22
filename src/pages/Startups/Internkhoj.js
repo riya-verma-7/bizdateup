@@ -122,12 +122,15 @@ const Content = (props) => {
         </thead>
         <tbody>
             <tr>
-                <td>Investment Amount</td>
+                <td>Investment Amount<br><div class="smalltext text-justify">(Inclusive of GST - 18%)<div class="hoverable"> <i class="bi bi-info-circle iconstyle" ></i><div class="infohover text-justify">As CSOP subscription Amount is considered as a revenue<br>item in the company's accounts, 18% GST is applicable </div></div>
+                </td>
+                
+
                 <td>&#8377 ${data.amount}</td>
             </tr>
             <tr>
                 <td>Convenience Fee (2%)</td>
-                <td>&#8377 ${response.data.convenienceFees}</td>
+                <td> &#8377 ${response.data.convenienceFees}</td>
                
             </tr>
             <tr>
@@ -137,7 +140,7 @@ const Content = (props) => {
             </tr>
             <tr>
                 <td>TDS (10%) </td>
-                <td>&#8377 ${response.data.tds}</td>
+                <td>- &#8377 ${response.data.tds}</td>
                 
             </tr>
             <tr>
@@ -252,7 +255,6 @@ AMOUNT TO BE PAID
       </Modal>
     );
   }
-
   // const items = [
   //   { id: 1, idnm: "home", navheading: "Home" },
   //   { id: 3, idnm: "services", navheading: "Services" },

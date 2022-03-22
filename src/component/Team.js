@@ -1,101 +1,63 @@
-import React, { Component } from "react";
+import React from 'react'
+import Card from '../pages/Layout2/Card'
 import { Link } from "react-router-dom";
 
+
 import { Col, Container, Row, Button } from "reactstrap";
-import Slider from "react-slick";
 
 
-import HomeUrl from '../assets/images/home-border.png';
+const content=[
 
-import Img1 from '../assets/images/users/img-1.png';
-import Img2 from '../assets/images/users/img-2.png';
-import Img3 from '../assets/images/users/img-3.png';
-import Img4 from '../assets/images/users/img-4.png';
-
-export default class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      teams: [
-        {
+  {
           id: 1,
-          img: Img1,
           name: 'Invest Now',
           description: 'Invest in startups you believe. Learn how the business works and interact with the community as you grow your fortune.',
           link: '/Deals'
         },
         {
           id: 2,
-          img: Img2,
           name: 'Raise Funds',
           description: 'Get your funds through BizDateUp. Convert your community into capital and get funded through our investors.',
           link: 'https://docs.google.com/forms/d/e/1FAIpQLSc_6j9CLP7GJAabScLqYdOCFbSYEoOzzDI7gH40J-R2VCY4mw/viewform?usp=sf_link'
-        },
+        }
         
-      ],
-    };
-  }
+]
 
-  render() {
-    var temsettings = {
-      autoplay: true,
-      dots: true,
-      speed: 300,
-      infinite: false,
-      arrows: false,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    };
 
-    const teamslides = this.state.teams.map((team, teamindex) => {
-      return (
-        <div className="team-box p-3" key={teamindex}>
-          <Row className="align-items-center">
-            <Col lg={15} style={{backgroundColor: "#202054", padding: "10px", margin:"20px" }}>
-              <div className="mt-4" style={{textAlign: "center" }}>
-                <h5 className="mt-2" style={{color:'#ffffff'}}>{team.name}</h5>
-                <p className="text-muted mt-3">{team.description}</p>
-                <div className="team-social mt-4 pt-2">
-                  <ul className="list-inline mb-0">
-                    <li className="list-inline-item">
-                      {/* <Link to="#" className="text-reset"><i className="mdi mdi-facebook"></i></Link> */}
-                      <Button>{team.name}
+const Team = () => {
+  return (
+    <>
+
+
+<section className="section pt-0" style={{padding: '0px 0px 50px 0px'}}>
+          <Container>
+            <Row className="mt-5 pt-4">
+{
+  content.map(({id,name,description,link})=>(
+
+              <Col lg="6" key={id}>
+                <div style={{backgroundColor:'#202054',borderRadius:'15px'}}>
+      <Card>
+      <h5 className="mt-2" style={{color:'#ffffff'}}>{name}</h5>
+                <p className="text-muted mt-3">{description}</p>
+                <Button>{name}
                       <a
-                          href={team.link}
+                          href={link}
                           target="_blank"
                           className="text-reset"
                         ></a></Button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Col>
-            {/* <Col lg={6}>
-              <div className="mt-4" style={{textAlign: "center"}}>
-                <Button>Invest Now</Button>
-              </div>
-            </Col> */}
-          </Row>
-          
-        </div>
-      );
-    });
-    return (
-      <React.Fragment>
-        <section className="section pt-0" style={{padding: '0px 0px 50px 0px'}}>
-          <Container>
-            <Row className="mt-5 pt-4">
-              <Col lg="12">
-                <div className="team-carousel">
-                  <Slider {...temsettings}>
-                    {teamslides}
-                  </Slider>
+      </Card>
                 </div>
               </Col>
+  ))
+}
+
+
             </Row>
           </Container>
         </section>
-      </React.Fragment>
-    );
-  }
+    </>
+  )
 }
+
+export default Team

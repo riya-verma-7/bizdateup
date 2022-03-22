@@ -583,6 +583,12 @@ p {
 
 .text-muted {
   color: #828f99 !important;
+  
+}
+
+.text-muteds {
+  color: #828f99 !important;
+  text-align: justify;
 }
 
 .icon-dual-muted {

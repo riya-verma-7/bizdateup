@@ -8,7 +8,26 @@ import { useHistory, Link } from "react-router-dom";
 import Deal from "../pages/Deals";
 import "../assets/css/style.css";
 
+
+import Navbar from "../component/Navbar/NavBar";
+
 const Login = () => {
+
+  const items = [
+    // { id: 1, idnm: "home", navheading: "Home" },
+    // { id: 3, idnm: "services", navheading: "Services" },
+    // { id: 4, idnm: "pricing", navheading: "Pricing" },
+    // { id: 5, idnm: "team", navheading: "Team" },
+    // { id: 6, idnm: "clients", navheading: "Clients" },
+    // { id: 7, idnm: "contact", navheading: "Contact" },
+  ];
+
+  const [navItems, setNavItems] = useState(items);
+  const [pos, setPos] = useState(document.documentElement.scrollTop);
+  const [imglight, setImgLight] = useState(false);
+  const [navClass, setNavClass] = useState("");
+  const [fixTop, setFixTop] = useState(true);
+
   const { state, dispatch } = useContext(UserContext);
 
   const { register, handleSubmit, errors } = useForm();
@@ -39,10 +58,17 @@ const Login = () => {
   };
 
   return (
-    <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
+    <div>
+      <Navbar
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+      <Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
       
       <div
-        style={{ paddingBottom: "2.2rem" }}
+        style={{ paddingBottom: "2.2rem", marginTop: "7.5rem" }}
         className="col-md-6 offset-md-3 multi-step-form"
       >
         {errorMessage ? (
@@ -118,6 +144,7 @@ const Login = () => {
             Login
           </Button>
         </div>
+        <div>
         <p
           style={{ fontSize: "15px", textAlign: "center", marginTop: "25px" }}
         >
@@ -134,8 +161,28 @@ const Login = () => {
             </Link>
           </span>
         </p>
+        <p
+          style={{ fontSize: "15px", textAlign: "center", marginTop: "25px" }}
+        >
+          Forgot Password?{" "}
+          <span>
+            <Link
+              
+              style={{
+                textDecoration: "none",
+                color: "#202054",
+              }}
+            >
+              <strong>Click Here</strong>
+            </Link>
+          </span>
+        </p>
+        </div>
+        
       </div>
     </Form>
+    </div>
+    
   );
 };
 

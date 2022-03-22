@@ -34,12 +34,12 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="bg-home bg-light home-bg-3" id="home">
+        <section className="bg-home bg-light " id="home">
           <div className="home-center">
             <div className="home-desc-center">
               <Container>
                 <Row className="justify-content-evenly">
-                  <Col lg={8} sm={12}>
+                  <Col lg={12} sm={12}>
                     <div className="home-content text-justify">
                       <h1 className="home-title mt-4">About Us<span className="text-primary"></span> </h1>
                       <p className="text-muted mt-4 f-20">BizDateUp is a platform where founders, entrepreneurs and working professionals can find and connect with potential co-founders, business associates and like-minded individuals. We created BizDateUp with an idea to build a network of people who’ll share common interests, have their queries answered, and hopefully get the job done. 
@@ -52,17 +52,17 @@ But BizDateUp is more than just a business-centric social platform. At the heart
                       
                     </div>
                   </Col>
-                  <Col lg={4} sm={12} className="mt-2 d-flex justify-content-sm-center">
+                  {/* <Col lg={4} sm={12} className="mt-2 d-flex justify-content-sm-center">
                   <img src="https://images.unsplash.com/photo-1602934585418-f588bea4215c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" className="img-fluid " />
-                  </Col>
+                  </Col> */}
                 </Row>
               </Container>
               <ModalVideo
-                channel="youtube"
-                isOpen={this.state.isOpen}
-                videoId="99025203"
-                onClose={() => this.setState({ isOpen: false })}
-              />
+              channel="youtube"
+              isOpen={this.state.isOpen}
+              videoId="F3xCT9Oh3JI"
+              onClose={() => this.setState({ isOpen: false })}
+            />
             </div>
           </div>
         </section>

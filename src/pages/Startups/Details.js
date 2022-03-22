@@ -1,4 +1,5 @@
 import Img1 from '../../assets/images/startup/brewedleaf/thumbnail.jpg';
+import Img2 from '../../assets/images/startup/bidwheelz/thumbnail.jpg';
 import Logo from '../../assets/images/testi-img/img-4.png';
 import Founder from '../../assets/images/testi-img/img-4.png';
 import Pitch1 from '../../assets/images/startup/brewedleaf/pitch.pdf'
@@ -72,7 +73,7 @@ const details = [
     {
         id: '2',
         title: "Bid Wheelz",
-        img: Img1,
+        img: Img2,
         logo: Logo,
         description: 'Bidwheelz is a B2B and B2C transparent auction aggregator platform which helps people buy and sell vehicles through AI inspection models. The company provides all different types of services related to automobiles such as Sale, Purchase, Insurance, Loan, Servicing and Accessories which a customer would require during their vehicle use under one roof.',
         shortdescription: 'Bidwheelz is a Marketplace for buying and selling resale vehicles through Transparent Live Bidding.',

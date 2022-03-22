@@ -14,6 +14,7 @@ import Select from "react-select";
 
 import Progress from "./Progress";
 import { Link } from "react-router-dom";
+import Navbar from "../component/Navbar/NavBar";
 
 const ThirdStep = (props) => {
   var [value, getValue] = useState();
@@ -34,6 +35,21 @@ const ThirdStep = (props) => {
       description: user.description,
     },
   });
+
+  const items = [
+    // { id: 1, idnm: "home", navheading: "Home" },
+    // { id: 3, idnm: "services", navheading: "Services" },
+    // { id: 4, idnm: "pricing", navheading: "Pricing" },
+    // { id: 5, idnm: "team", navheading: "Team" },
+    // { id: 6, idnm: "clients", navheading: "Clients" },
+    // { id: 7, idnm: "contact", navheading: "Contact" },
+  ];
+
+  const [navItems, setNavItems] = useState(items);
+  const [pos, setPos] = useState(document.documentElement.scrollTop);
+  const [imglight, setImgLight] = useState(false);
+  const [navClass, setNavClass] = useState("");
+  const [fixTop, setFixTop] = useState(true);
 
   // let skills = [
   //   {
@@ -213,7 +229,14 @@ const ThirdStep = (props) => {
   const [options] = useState(skills);
 
   return (
-    <Form className="input-form" onSubmit={handleSubmit}>
+    <div>
+       <Navbar
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+      <Form className="input-form" onSubmit={handleSubmit}>
       <motion.div
         className="col-md-12 offset-md-1 multi-step-form"
         initial={{ x: "-100vw" }}
@@ -334,6 +357,8 @@ const ThirdStep = (props) => {
         </div>
       </motion.div>
     </Form>
+    </div>
+    
   );
 };
 
