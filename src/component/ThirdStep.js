@@ -243,7 +243,7 @@ const ThirdStep = (props) => {
         animate={{ x: 0 }}
         transition={{ stiffness: 150 }}
       >
-        <Progress />
+        
         <div style={{ padding: "0.7rem 1.4rem" }}>
           <div>
             <h3>1. Privacy Policy</h3>
@@ -264,7 +264,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange1}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Privacy policy</strong>
+                  <strong>I Agree to <Link to="/privacy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Privacy Policy</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -289,7 +289,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange2}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Terms of use</strong>
+                  <strong>I Agree to <Link to="/terms" style={{textDecoration: "none",color: "#FF0000"}}><strong>Terms Of Use</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -314,7 +314,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange3}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Risk in Investment</strong>
+                  <strong>I Agree to <Link to="/risk" style={{textDecoration: "none",color: "#FF0000"}}><strong>Risk in Investment</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -340,7 +340,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange4}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Refund Policy</strong>
+                  <strong>I Agree to <Link to="/refundpolicy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Refund Policy</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
