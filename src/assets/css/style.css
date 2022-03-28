@@ -712,12 +712,22 @@ p {
 }
 
 .text-muted {
+<<<<<<< HEAD
     color: #828f99 !important;
 }
 
 .text-muteds {
     color: #828f99 !important;
     text-align: justify;
+=======
+  color: #828f99 !important;
+  
+}
+
+.text-muteds {
+  color: #828f99 !important;
+  text-align: justify;
+>>>>>>> 9fca4791ab05bea75c879d498efcbd7453e7af1a
 }
 
 .icon-dual-muted {
