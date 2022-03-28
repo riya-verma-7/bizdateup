@@ -10,7 +10,7 @@ import axios from "axios";
 import swal from "sweetalert";
 import Swal from 'sweetalert2';
 // import { BASE_API_URL } from "../utils/constants";
-
+import { Link as Link2 } from "react-scroll";
 //for modal window 
 import "./internkhoj.css"
 
@@ -21,6 +21,70 @@ import Footer from "../../component/Footer/Footer";
 import details from "./Details";
 
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+
+
+// badge content for pitch deck
+const badgeContent=[{
+  id: "1",
+    title: "Problem",
+    path: "startuproblem"
+},
+{
+  id: "2",
+    title: "Solution",
+    path: "startupsolution"
+},
+
+{
+  id: "3",
+    title: "Product",
+    path: "startupproduct"
+
+},
+
+  {
+    id: "4",
+    title: "Traction",
+    path: "startuptraction"
+
+  },
+
+ { id: "5",
+    title: "Customers",
+    path: "startupcustomers"
+},
+{
+  id: "6",
+    title: "Business Model",
+    path: "startupmodel"
+},
+{
+
+  id: "7",
+    title: "Competition",
+    path: "startupcompetition"
+},
+
+{
+
+  id: "8",
+    title: " Usage of funds",
+    path: "startupfundusage"
+},
+
+  {
+
+    id: "9",
+      title: " Vision",
+      path: "startupvision"
+  },
+  {
+    id: "10",
+      title: "Exit",
+      path: "startupexit"
+
+  }
+]
 
 const Content = (props) => {
 
@@ -122,12 +186,15 @@ const Content = (props) => {
         </thead>
         <tbody>
             <tr>
-                <td>Investment Amount</td>
+                <td>Investment Amount<br><div class="smalltext text-justify">(Inclusive of GST - 18%)<div class="hoverable"><i class="bi bi-info-circle iconstyle" ></i><div class="infohover text-justify">As CSOP subscription Amount is considered as a revenue<br>item in the company's accounts, 18% GST is applicable </div></div>
+                </td>
+                
+
                 <td>&#8377 ${data.amount}</td>
             </tr>
             <tr>
                 <td>Convenience Fee (2%)</td>
-                <td>&#8377 ${response.data.convenienceFees}</td>
+                <td> &#8377 ${response.data.convenienceFees}</td>
                
             </tr>
             <tr>
@@ -137,7 +204,7 @@ const Content = (props) => {
             </tr>
             <tr>
                 <td>TDS (10%) </td>
-                <td>&#8377 ${response.data.tds}</td>
+                <td>- &#8377 ${response.data.tds}</td>
                 
             </tr>
             <tr>
@@ -252,7 +319,6 @@ AMOUNT TO BE PAID
       </Modal>
     );
   }
-
   // const items = [
   //   { id: 1, idnm: "home", navheading: "Home" },
   //   { id: 3, idnm: "services", navheading: "Services" },
@@ -395,8 +461,8 @@ AMOUNT TO BE PAID
         style={{ padding: "0px 0px 30px 0px" }}
       >
         <Container>
-          <Row className="mt-5 pt-4">
-            <Col lg="4">
+          <Row className="marginclass pt-4">
+            <Col lg="12">
               <div className="pricing-box mt-4">
                 <i className={"h1 mdi " + startup.icon}></i>
 
@@ -432,7 +498,11 @@ AMOUNT TO BE PAID
                     </div> */}
               </div>
             </Col>
-            <Col lg="4">
+            </Row>
+
+            <Row className="mt-5 pt-4 d-flex justify-content-center">
+           
+            <Col lg="4" className="m-2" >
               <div className="pricing-box mt-4">
                 <i className={"h1 mdi " + startup.icon2}></i>
 
@@ -478,7 +548,7 @@ AMOUNT TO BE PAID
                 </div>
               </div>
             </Col>
-            <Col lg="4">
+            <Col lg="4"  className="m-2">
               <div className="pricing-box mt-4">
                 <div className="pricing-badge">
                   <span className="badge">Important</span>{" "}
@@ -570,106 +640,39 @@ AMOUNT TO BE PAID
               justifyContent: "space-between",
             }}
           >
-            <Badge
-              href="#startuproblem"
-              style={{
+{
+  badgeContent.map((item,id)=>{
+
+return(
+  <>
+    <Badge key={id} style={{
                 fontSize: "17px",
                 margin: "7px",
                 backgroundColor: "#252552",
-              }}
-            >
-              Problem
-            </Badge>
-            <Badge
-              href="#startupsolution"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Solution
-            </Badge>
-            <Badge
-              href="#startupproduct"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Product
-            </Badge>
-            <Badge
-              href="#startuptraction"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Traction
-            </Badge>
-            <Badge
-              href="#startupcustomers"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Customers
-            </Badge>
-            <Badge
-              href="#startupmodel"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Business Model
-            </Badge>
-            <Badge
-              href="#startupcompetition"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Competition
-            </Badge>
-            <Badge
-              href="#startupfundusage"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Usage of funds
-            </Badge>
-            <Badge
-              href="#startupvision"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Vision
-            </Badge>
-            <Badge
-              href="#startupexit"
-              style={{
-                fontSize: "17px",
-                margin: "7px",
-                backgroundColor: "#252552",
-              }}
-            >
-              Exit
-            </Badge>
+                
+              }}>
+    <Link2
+            activeClass="active"
+            to={item.path}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className="linkstyle"
+          >
+          {item.title}
+        </Link2>
+
+    </Badge>
+  </>
+)
+  }
+
+  )
+}
+
+           
+           
           </Container>
 
           {/* <Container>

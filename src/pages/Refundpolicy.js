@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../src/styles.scss';
 import Refundpolicy from "../component/Refundpolicy";
 
-class ContactUs extends Component {
+class RefundpolicyPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,5 +61,5 @@ class ContactUs extends Component {
     );
   }
 }
-export default ContactUs;
+export default RefundpolicyPage;
 

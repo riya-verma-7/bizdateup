@@ -15,6 +15,7 @@ const Card = (props) => {
 
   }}>
 
+{/* test */}
 {props.children}
   </div>;
 };

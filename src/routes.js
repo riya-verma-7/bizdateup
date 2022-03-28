@@ -11,9 +11,9 @@ import ForgotPassword from "../src/component/ForgotPassword";
 import ContactUs from "./pages/ContactUs";
 import Deal from "../src/pages/Deals";
 import Privacypage from '../src/pages/Privacy';
-import Terms from '../src/pages/Terms';
-import Risk from '../src/pages/Risk';
-import Refundpolicy from '../src/pages/Refundpolicy';
+import TermsPage from '../src/pages/Terms';
+import RiskPage from '../src/pages/Risk';
+import RefundpolicyPage from '../src/pages/Refundpolicy';
 import Dashboard from '../src/pages/Dashboard';
 import Startups from "../src/pages/Startups/Internkhoj";
 import Profile from "../src/component/Profile";
@@ -36,10 +36,10 @@ const routes = [
     { path: "/ForgotPassword", component: ForgotPassword },
     { path: "/ContactUs", component: ContactUs },
     { path: "/Privacy", component: Privacypage },
-    { path: "/Terms", component: Terms },
+    { path: "/Terms", component: TermsPage },
     { path: "/Deals", component: Deal },
-    { path: "/Risk", component: Risk },
-    { path: "/Refundpolicy", component: Refundpolicy },
+    { path: "/Risk", component: RiskPage },
+    { path: "/Refundpolicy", component: RefundpolicyPage },
     { path: "/Dashboard", component: Dashboard },
     { path: "/Internkhoj", component: Startups },
     { path: "/startup/:id", component: Startups },

@@ -92,7 +92,7 @@ const Privacy = () => {
             smooth={true}
             offset={-100}
             duration={500}
-            className="linkstyle"
+            className="linkstyle3"
           >
 {item.title}
           </Link>
@@ -111,13 +111,13 @@ const Privacy = () => {
      
       
       <section className="section" id="contact">
-        <Container style={{ marginLeft: "25%" }}>
+        <Container style={{ marginLeft: "20%" }}>
           <section id="1">
             <Row>
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-5">Privacy Policy</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     The privacy policy (“Privacy Policy”) governs the use of the
                     website of the BizDateUp platform
                     [https://www.bizdateup.com/] (“Website”, “we”, “us”) and the
@@ -156,7 +156,7 @@ const Privacy = () => {
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-4">Services</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     This Privacy Policy, including our cookie policy applies to
                     your use of our Services.This Privacy Policy applies to
                     Business BizDateUp Technologies Pvt Ltd sites, apps,
@@ -182,7 +182,7 @@ const Privacy = () => {
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-4">Data We Collect</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     You provide data to create an account with us. Further, we
                     collect, store, and process such other information including
                     but not limited to your Authentication Token, communication
@@ -267,7 +267,7 @@ const Privacy = () => {
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-4">Profile</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     You have choices about the information on your profile, such
                     as your education, work experience, skills, photo, city or
                     area and endorsements. You don’t have to provide additional
@@ -380,7 +380,7 @@ const Privacy = () => {
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-4">Legal Disclosures</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     We may need to share your data when we believe it’s required
                     by law or to help protect the rights and safety of you, us
                     or others. It is possible that we will need to disclose
@@ -425,7 +425,7 @@ const Privacy = () => {
                   <h3 className="title-heading mt-4">
                     Change in Control or Sale
                   </h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     We may share your data when our business is sold to others,
                     but it must continue to be used in accordance with this
                     Privacy Policy. We can also share your personal data as part
@@ -446,7 +446,7 @@ const Privacy = () => {
               <Col lg={12}>
                 <div className="title-box text-left">
                   <h3 className="title-heading mt-4">Security</h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     The User Information shall be governed by and protected by
                     us according to the security practices and procedures
                     mandated under the Act and more particularly described under
@@ -481,7 +481,7 @@ const Privacy = () => {
                   <h3 className="title-heading mt-4">
                     Lawful Bases for Processing
                   </h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     We have lawful bases to collect, use and share data about
                     you. You have choices about our use of your data. At any
                     time, you can withdraw consent you have provided by going to
@@ -511,7 +511,7 @@ const Privacy = () => {
                   <h3 className="title-heading mt-4">
                     Grievance Redressal Mechanism
                   </h3>
-                  <p className="text-muted f-17 mt-3">
+                  <p className="text-muteds f-17 mt-3">
                     In order to address any of your grievances or discrepancies
                     of the information displayed on the Website, the Website
                     shall designate a grievance redressal officer (“Grievance

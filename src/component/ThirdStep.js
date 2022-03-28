@@ -14,6 +14,7 @@ import Select from "react-select";
 
 import Progress from "./Progress";
 import { Link } from "react-router-dom";
+import Navbar from "../component/Navbar/NavBar";
 
 const ThirdStep = (props) => {
   var [value, getValue] = useState();
@@ -34,6 +35,21 @@ const ThirdStep = (props) => {
       description: user.description,
     },
   });
+
+  const items = [
+    // { id: 1, idnm: "home", navheading: "Home" },
+    // { id: 3, idnm: "services", navheading: "Services" },
+    // { id: 4, idnm: "pricing", navheading: "Pricing" },
+    // { id: 5, idnm: "team", navheading: "Team" },
+    // { id: 6, idnm: "clients", navheading: "Clients" },
+    // { id: 7, idnm: "contact", navheading: "Contact" },
+  ];
+
+  const [navItems, setNavItems] = useState(items);
+  const [pos, setPos] = useState(document.documentElement.scrollTop);
+  const [imglight, setImgLight] = useState(false);
+  const [navClass, setNavClass] = useState("");
+  const [fixTop, setFixTop] = useState(true);
 
   // let skills = [
   //   {
@@ -213,14 +229,21 @@ const ThirdStep = (props) => {
   const [options] = useState(skills);
 
   return (
-    <Form className="input-form" onSubmit={handleSubmit}>
+    <div>
+       <Navbar
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+      <Form className="input-form" onSubmit={handleSubmit}>
       <motion.div
         className="col-md-12 offset-md-1 multi-step-form"
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
         transition={{ stiffness: 150 }}
       >
-        <Progress />
+        
         <div style={{ padding: "0.7rem 1.4rem" }}>
           <div>
             <h3>1. Privacy Policy</h3>
@@ -241,7 +264,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange1}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Privacy policy</strong>
+                  <strong>I Agree to <Link to="/privacy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Privacy Policy</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -266,7 +289,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange2}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Terms of use</strong>
+                  <strong>I Agree to <Link to="/terms" style={{textDecoration: "none",color: "#FF0000"}}><strong>Terms Of Use</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -291,7 +314,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange3}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Risk in Investment</strong>
+                  <strong>I Agree to <Link to="/risk" style={{textDecoration: "none",color: "#FF0000"}}><strong>Risk in Investment</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -317,7 +340,7 @@ const ThirdStep = (props) => {
                   onChange={handleChange4}
                 />{" "}
                 <span id="asd">
-                  <strong>I Agree to Refund Policy</strong>
+                  <strong>I Agree to <Link to="/refundpolicy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Refund Policy</strong> </Link></strong>
                 </span>
               </div>
             </Form.Group>
@@ -334,6 +357,8 @@ const ThirdStep = (props) => {
         </div>
       </motion.div>
     </Form>
+    </div>
+    
   );
 };
 

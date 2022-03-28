@@ -100,7 +100,7 @@ import '../../src/styles.scss';
 
 const SignUp = ()=>{
   return(
-    <div>
+     <div style = {{marginTop: "5rem"}}>
       <AppRouter />
     </div>
   )

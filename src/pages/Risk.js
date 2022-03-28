@@ -7,7 +7,7 @@ import '../../src/styles.scss';
 
 import Risk from "../component/Risk";
 
-class ContactUs extends Component {
+class RiskPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,5 +62,5 @@ class ContactUs extends Component {
     );
   }
 }
-export default ContactUs;
+export default RiskPage;
 

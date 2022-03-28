@@ -7,7 +7,7 @@ import '../../src/styles.scss';
 import Contact from '../component/Contact';
 import Terms from "../component/Terms";
 
-class ContactUs extends Component {
+class TermsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,10 +57,12 @@ class ContactUs extends Component {
           <Terms />
 
           {/* Importing Footer */}
-          <Footer />
+          <div style={{marginLeft:"25%"}}>
+          <Footer  />
+          </div>
       </React.Fragment>
     );
   }
 }
-export default ContactUs;
+export default TermsPage;
 
