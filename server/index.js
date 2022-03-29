@@ -1,39 +1,43 @@
-const path = require('path');
-const express = require('express');
+const path = require("path");
+const express = require("express");
 // const fileUpload = require('express-fileupload');
 const bodyParser = require("body-parser");
 const paymentRoute = require("./paymentRoute");
 const mongoose = require("mongoose");
-const userRouter = require('./routers/user');
-require('./db');
+const userRouter = require("./routers/user");
+require("./db");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const cors = require('cors');
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
-
-app.use(express.static(path.join(__dirname, '..', 'build')));
+app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.json());
 app.use(userRouter);
 
-app.get('/', (req, res) => {
-  res.send('<h2>This is from index.js file</h2>');
+app.get("/", (req, res) => {
+  res.send("<h2>This is from index.js file</h2>");
 });
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
 mongoose
-  .connect("mongodb://localhost:27017/paymentorder", {
-    useFindAndModify: true,
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
+  .connect(
+    "mongodb+srv://pranav:1999mistry@cluster0.usll9.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    {
+      useFindAndModify: true,
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    }
+  )
   .then(() => console.log("DB CONNECTED"))
   .catch(() => console.log("FAILED TO CONNET WITH DB"));
 
@@ -63,11 +67,9 @@ app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
 
-
-
 // const cors = require('cors');
 // const corsOptions ={
-//     origin:'http://localhost:3000', 
+//     origin:'http://localhost:3000',
 //     credentials:true,            //access-control-allow-credentials:true
 //     optionSuccessStatus:200
 // }
