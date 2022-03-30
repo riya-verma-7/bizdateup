@@ -81,7 +81,6 @@ th {
 
 .hoverable {
     display: inline-block;
-<<<<<<< HEAD
 }
 
 
@@ -97,6 +96,4 @@ th {
 .linkstyle {
     color: white !important;
     cursor: pointer;
-=======
->>>>>>> 9fca4791ab05bea75c879d498efcbd7453e7af1a
 }

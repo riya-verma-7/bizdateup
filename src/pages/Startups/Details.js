@@ -1,9 +1,6 @@
 
 import Img1 from '../../assets/images/startup/brewedleaf/thumbnail.jpg';
-<<<<<<< HEAD
 // import Img1 from '../../assets/images/startup/brewedleaf/brew2.jpg';
-=======
->>>>>>> 9fca4791ab05bea75c879d498efcbd7453e7af1a
 import Img2 from '../../assets/images/startup/bidwheelz/thumbnail.jpg';
 import Logo from '../../assets/images/testi-img/img-4.png';
 import Founder from '../../assets/images/testi-img/img-4.png';

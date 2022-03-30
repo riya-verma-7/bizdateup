@@ -20,7 +20,7 @@ router.get("/logo", getLogo);
 // module.exports = router;
 
 router.post("/register", async (req, res) => {
-  const { user_email, first_name, user_password } = req.body;
+  const { user_email, first_name, last_name, user_password, phone } = req.body;
 
   let user = await User.findOne({ user_email });
   if (user) {
@@ -50,6 +50,8 @@ router.post("/register", async (req, res) => {
               status: "subscribed",
               merge_fields: {
                 FNAME: first_name,
+                PHONE: phone,
+                LNAME: last_name,
               },
             })
             .then((res) => console.log(res))
