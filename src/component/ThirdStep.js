@@ -17,6 +17,8 @@ import Select from "react-select";
 import Progress from "./Progress";
 import { Link } from "react-router-dom";
 import Navbar from "../component/Navbar/NavBar";
+import Spinner from "./Spinner";
+
 
 const ThirdStep = (props) => {
   var [value, getValue] = useState();
@@ -30,6 +32,8 @@ const ThirdStep = (props) => {
   const [check2, setCheck2] = useState();
   const [check3, setCheck3] = useState();
   const [check4, setCheck4] = useState();
+  const[spinner,showSpinner]=useState(false);
+ 
   const { user } = props;
   let history = useHistory();
   const { register, errors } = useForm({
@@ -52,6 +56,8 @@ const ThirdStep = (props) => {
   const [imglight, setImgLight] = useState(false);
   const [navClass, setNavClass] = useState("");
   const [fixTop, setFixTop] = useState(true);
+
+  
 
   // let skills = [
   //   {
@@ -148,9 +154,11 @@ const ThirdStep = (props) => {
   }, []);
 
   const handleSubmit = async (event) => {
+    showSpinner(true);
     event.preventDefault();
     console.log(true);
     console.log(12);
+    
     try {
       const { user } = props;
       let sk = "";
@@ -170,76 +178,87 @@ const ThirdStep = (props) => {
       //   skillH: valueH
       // };
 
+     
+      
       console.log(12);
+      
       await axios.post(`${BASE_API_URL}/register`, {
         ...user,
         // ...updatedData
-      });
-
-      Swal.fire({
-        icon: "success",
-        // confirmButtonText:'Invest Now',
-        // buttonsStyling: false,
-        // customClass: {
-        //   confirmButton: 'invest-sweet-alert-button',
-
-        // },
-        showConfirmButton: false,
-
-        html: `
+      
+      } )
+      
+      showSpinner(false);
+     
+       Swal.fire(
+         {
+           icon:'success',
+           // confirmButtonText:'Invest Now',
+           // buttonsStyling: false,
+           // customClass: {
+             //   confirmButton: 'invest-sweet-alert-button',
+    
+             // },
+  showConfirmButton: false,
+  
+  html:`
   <div>
-<p class="titlemodal"> Thank you! you've been successfully signed up.  </p>
-
-<a href="/Deals">
-<button class="invest-sweet-alert-button">Invest Now </button>
-</a>
-
-<div class="team-social mt-4 pt-2 iconmodal">
-                    <ul class="list-inline mb-0">
+  <p class="titlemodal"> Thank you! you've been successfully signed up.  </p>
+  
+  <a href="/Deals">
+  <button class="invest-sweet-alert-button">Invest Now </button>
+  </a>
+  
+  <div class="team-social mt-4 pt-2 iconmodal">
+  <ul class="list-inline mb-0">
                       <li class="list-inline-item">
                         <a
                           href="https://www.instagram.com/bizdateup/"
                           target="_blank"
                           class="text-reset"
                         >
-                          <i class="mdi mdi-instagram"></i>
+                        <i class="mdi mdi-instagram"></i>
                           
                         </a>
                         
-                      </li>
-                      <li class="list-inline-item">
+                        </li>
+                        <li class="list-inline-item">
                         <a
-                          href="https://www.facebook.com/bizdateupindia"
-                          target="_blank"
-                          class="text-reset"
+                        href="https://www.facebook.com/bizdateupindia"
+                        target="_blank"
+                        class="text-reset"
                         >
                         <i class="mdi mdi-facebook"></i>
                         </a>
                       </li>
                       <li class="list-inline-item">
                         <a
-                          href="https://in.linkedin.com/company/bizdateup"
-                          target="_blank"
-                          class="text-reset"
+                        href="https://in.linkedin.com/company/bizdateup"
+                        target="_blank"
+                        class="text-reset"
                         >
                         <i class="mdi mdi-whatsapp"></i>
                         </a>
-                      </li>
-                      
-                    </ul>
-                  </div>
-  </div>
-  `,
-      }).then((result) => {
-        if (result.isConfirmed) {
-          props.resetUser();
-          // props.history.push('/Deals')
-          console.log("Signed up");
-          // window.location.href = 'Deals'
+                        </li>
+                        
+                        </ul>
+                        </div>
+                        </div>
+                        `,
+                      }).then(
+                        
+        (result) => {
+          if (result.isConfirmed) {
+            props.resetUser();
+            // props.history.push('/Deals')
+            console.log("Signed up")
+            // window.location.href = 'Deals'
+          }
         }
-      });
-      // history.push('/')
-    } catch (error) {
+        );
+        // history.push('/')
+      }
+    catch (error) {
       console.log(error);
       if (error.response) {
         Swal.fire({
@@ -285,173 +304,139 @@ const ThirdStep = (props) => {
 
   return (
     <div>
-      <Navbar
-        navItems={navItems}
-        navClass={navClass}
-        imglight={imglight}
-        top={fixTop}
-      />
+       <Navbar
+            navItems={navItems}
+            navClass={navClass}
+            imglight={imglight}
+            top={fixTop}
+          />
+
+        {spinner?<Spinner/>: <>
       <Form className="input-form" onSubmit={handleSubmit}>
-        <motion.div
-          className="col-md-12 offset-md-1 multi-step-form"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ stiffness: 150 }}
-        >
-          <div style={{ padding: "0.7rem 1.4rem" }}>
-            <div>
-              <h3>1. Privacy Policy</h3>
-              {/* <p>
+      <motion.div
+        className="col-md-12 offset-md-1 multi-step-form"
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ stiffness: 150 }}
+      >
+
+        <div style={{ padding: "0.7rem 1.4rem" }}>
+          <div>
+       
+            <h3>1. Privacy Policy</h3>
+            {/* <p>
               Vivamus varius urna id nisi consequat scelerisque. Nullam massa
               mauris, pretium ut erat sit amet, fermentum fermentum augue.
             </p> */}
-              <Form.Group controlId="check1">
-                {isLoading && (
-                  <p className="loading">Loading. Please wait...</p>
-                )}
-                {/* <Form.Label>I Agree to Privacy policy</Form.Label><br/> */}
-                <div className="tncContainer">
-                  <input
-                    style={{ marginRight: "1rem" }}
-                    type="checkbox"
-                    name="check"
-                    // placeholder="Password"
-                    // value={formValues.password}
-                    onChange={handleChange1}
-                  />{" "}
-                  <span id="asd">
-                    <strong>
-                      I Agree to{" "}
-                      <Link
-                        to="/privacy"
-                        style={{ textDecoration: "none", color: "#FF0000" }}
-                      >
-                        <strong>Privacy Policy</strong>{" "}
-                      </Link>
-                    </strong>
-                  </span>
-                </div>
-              </Form.Group>
-            </div>
+            <Form.Group controlId="check1">
+              {isLoading && <p className="loading">Loading. Please wait...</p>}
+              {/* <Form.Label>I Agree to Privacy policy</Form.Label><br/> */}
+              <div className="tncContainer">
+                <input
+                  style={{ marginRight: "1rem" }}
+                  type="checkbox"
+                  name="check"
+                  // placeholder="Password"
+                  // value={formValues.password}
+                  onChange={handleChange1}
+                />{" "}
+                <span id="asd">
+                  <strong>I Agree to <Link to="/privacy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Privacy Policy</strong> </Link></strong>
+                </span>
+              </div>
+            </Form.Group>
+          </div>
 
-            <div>
-              <h3>2. Terms of Use</h3>
-              {/* <p>
+          <div>
+            <h3>2. Terms of Use</h3>
+            {/* <p>
               Suspendisse non venenatis velit. Proin commodo lacinia bibendum.
               Phasellus suscipit lacus in diam accumsan tincidunt.
             </p> */}
-              <Form.Group controlId="check2">
-                {isLoading && (
-                  <p className="loading">Loading. Please wait...</p>
-                )}
-                {/* <Form.Label>I Agree to Terms of use</Form.Label><br/> */}
-                <div className="tncContainer">
-                  <input
-                    style={{ marginRight: "1rem" }}
-                    type="checkbox"
-                    name="check"
-                    // placeholder="Password"
-                    // value={formValues.password}
-                    onChange={handleChange2}
-                  />{" "}
-                  <span id="asd">
-                    <strong>
-                      I Agree to{" "}
-                      <Link
-                        to="/terms"
-                        style={{ textDecoration: "none", color: "#FF0000" }}
-                      >
-                        <strong>Terms Of Use</strong>{" "}
-                      </Link>
-                    </strong>
-                  </span>
-                </div>
-              </Form.Group>
-            </div>
+            <Form.Group controlId="check2">
+              {isLoading && <p className="loading">Loading. Please wait...</p>}
+              {/* <Form.Label>I Agree to Terms of use</Form.Label><br/> */}
+              <div className="tncContainer">
+                <input
+                  style={{ marginRight: "1rem" }}
+                  type="checkbox"
+                  name="check"
+                  // placeholder="Password"
+                  // value={formValues.password}
+                  onChange={handleChange2}
+                />{" "}
+                <span id="asd">
+                  <strong>I Agree to <Link to="/terms" style={{textDecoration: "none",color: "#FF0000"}}><strong>Terms Of Use</strong> </Link></strong>
+                </span>
+              </div>
+            </Form.Group>
+          </div>
 
-            <div>
-              <h3>3. Risk of Investment</h3>
-              {/* <p>
+          <div>
+            <h3>3. Risk of Investment</h3>
+            {/* <p>
               Aenean vulputate lacinia velit, pulvinar ultricies magna. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit.
             </p> */}
-              <Form.Group controlId="check3">
-                {isLoading && (
-                  <p className="loading">Loading. Please wait...</p>
-                )}
-                {/* <Form.Label>I Agree to Risk in investment</Form.Label><br/> */}
-                <div className="tncContainer">
-                  <input
-                    style={{ marginRight: "1rem" }}
-                    type="checkbox"
-                    name="check"
-                    // placeholder="Password"
-                    // value={formValues.password}
-                    onChange={handleChange3}
-                  />{" "}
-                  <span id="asd">
-                    <strong>
-                      I Agree to{" "}
-                      <Link
-                        to="/risk"
-                        style={{ textDecoration: "none", color: "#FF0000" }}
-                      >
-                        <strong>Risk in Investment</strong>{" "}
-                      </Link>
-                    </strong>
-                  </span>
-                </div>
-              </Form.Group>
-            </div>
+            <Form.Group controlId="check3">
+              {isLoading && <p className="loading">Loading. Please wait...</p>}
+              {/* <Form.Label>I Agree to Risk in investment</Form.Label><br/> */}
+              <div className="tncContainer">
+                <input
+                  style={{ marginRight: "1rem" }}
+                  type="checkbox"
+                  name="check"
+                  // placeholder="Password"
+                  // value={formValues.password}
+                  onChange={handleChange3}
+                />{" "}
+                <span id="asd">
+                  <strong>I Agree to <Link to="/risk" style={{textDecoration: "none",color: "#FF0000"}}><strong>Risk in Investment</strong> </Link></strong>
+                </span>
+              </div>
+            </Form.Group>
+          </div>
 
-            <div>
-              <h3>4. Refund Policy</h3>
-              {/* <p>
+          <div>
+            <h3>4. Refund Policy</h3>
+            {/* <p>
               Morbi sodales justo metus, ut feugiat ipsum condimentum a. Sed
               fermentum ante mattis erat pulvinar volutpat ac molestie eget
               vehicula.
             </p> */}
-              <Form.Group controlId="check4">
-                {isLoading && (
-                  <p className="loading">Loading. Please wait...</p>
-                )}
-                {/* <Form.Label>I Agree to Declaration</Form.Label><br/> */}
-                <div className="tncContainer">
-                  <input
-                    style={{ marginRight: "1rem" }}
-                    type="checkbox"
-                    name="check"
-                    // placeholder="Password"
-                    // value={formValues.password}
-                    onChange={handleChange4}
-                  />{" "}
-                  <span id="asd">
-                    <strong>
-                      I Agree to{" "}
-                      <Link
-                        to="/refundpolicy"
-                        style={{ textDecoration: "none", color: "#FF0000" }}
-                      >
-                        <strong>Refund Policy</strong>{" "}
-                      </Link>
-                    </strong>
-                  </span>
-                </div>
-              </Form.Group>
-            </div>
-
-            <Button
-              style={{ marginTop: "1.5rem" }}
-              variant="primary"
-              type="submit"
-              disabled={!(check1 && check2 && check3 && check4)}
-            >
-              Register
-            </Button>
+            <Form.Group controlId="check4">
+              {isLoading && <p className="loading">Loading. Please wait...</p>}
+              {/* <Form.Label>I Agree to Declaration</Form.Label><br/> */}
+              <div className="tncContainer">
+                <input
+                  style={{ marginRight: "1rem" }}
+                  type="checkbox"
+                  name="check"
+                  // placeholder="Password"
+                  // value={formValues.password}
+                  onChange={handleChange4}
+                />{" "}
+                <span id="asd">
+                  <strong>I Agree to <Link to="/refundpolicy" style={{textDecoration: "none",color: "#FF0000"}}><strong>Refund Policy</strong> </Link></strong>
+                </span>
+              </div>
+            </Form.Group>
           </div>
-        </motion.div>
-      </Form>
+
+          <Button
+            style={{ marginTop: "1.5rem" }}
+            variant="primary"
+            type="submit"
+            disabled={!(check1 && check2 && check3 && check4)}
+          >
+            Register
+          </Button>
+        </div>
+      </motion.div>
+    </Form>
+        </>}
     </div>
+    
   );
 };
 

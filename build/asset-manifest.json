@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.99b4920e.chunk.css",
-    "main.js": "/static/js/main.cdb29bd1.chunk.js",
-    "main.js.map": "/static/js/main.cdb29bd1.chunk.js.map",
+    "main.css": "/static/css/main.cce2649b.chunk.css",
+    "main.js": "/static/js/main.ec1ede3a.chunk.js",
+    "main.js.map": "/static/js/main.ec1ede3a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d9e0524.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d9e0524.js.map",
     "static/css/2.00b699ef.chunk.css": "/static/css/2.00b699ef.chunk.css",
-    "static/js/2.8b81fec4.chunk.js": "/static/js/2.8b81fec4.chunk.js",
-    "static/js/2.8b81fec4.chunk.js.map": "/static/js/2.8b81fec4.chunk.js.map",
+    "static/js/2.920bb1c7.chunk.js": "/static/js/2.920bb1c7.chunk.js",
+    "static/js/2.920bb1c7.chunk.js.map": "/static/js/2.920bb1c7.chunk.js.map",
     "ddecc7f836da38734bef0d3d2235b938.js": "/ddecc7f836da38734bef0d3d2235b938.js",
     "ddecc7f836da38734bef0d3d2235b938.js.LICENSE.txt": "/ddecc7f836da38734bef0d3d2235b938.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.00b699ef.chunk.css.map": "/static/css/2.00b699ef.chunk.css.map",
-    "static/css/main.99b4920e.chunk.css.map": "/static/css/main.99b4920e.chunk.css.map",
-    "static/js/2.8b81fec4.chunk.js.LICENSE.txt": "/static/js/2.8b81fec4.chunk.js.LICENSE.txt",
+    "static/css/main.cce2649b.chunk.css.map": "/static/css/main.cce2649b.chunk.css.map",
+    "static/js/2.920bb1c7.chunk.js.LICENSE.txt": "/static/js/2.920bb1c7.chunk.js.LICENSE.txt",
     "static/media/themes.scss": "/static/media/bg-5.d0c7cf07.png",
     "static/media/bg-1.f6776047.jpg": "/static/media/bg-1.f6776047.jpg",
     "static/media/style.css": "/static/media/bg-2.b2e401ba.png",
@@ -38,18 +38,19 @@
     "static/media/joining.122f54e6.png": "/static/media/joining.122f54e6.png",
     "static/media/logo-dark.2c8bbfea.png": "/static/media/logo-dark.2c8bbfea.png",
     "static/media/logo-light.2c8bbfea.png": "/static/media/logo-light.2c8bbfea.png",
-    "static/media/materialdesignicons.min.css": "/static/media/materialdesignicons-webfont.b70068f2.woff2",
+    "static/media/materialdesignicons.min.css": "/static/media/materialdesignicons-webfont.e81cc6bc.svg",
     "static/media/meet2.f93e3864.png": "/static/media/meet2.f93e3864.png",
     "static/media/pitch.c7fffbdf.pdf": "/static/media/pitch.c7fffbdf.pdf",
     "static/media/pitch.f4298cf0.pdf": "/static/media/pitch.f4298cf0.pdf",
+    "static/media/spinner.2c4c4378.gif": "/static/media/spinner.2c4c4378.gif",
     "static/media/thumbnail.b547ac58.jpg": "/static/media/thumbnail.b547ac58.jpg",
     "static/media/thumbnail.bffa341d.jpg": "/static/media/thumbnail.bffa341d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5d9e0524.js",
     "static/css/2.00b699ef.chunk.css",
-    "static/js/2.8b81fec4.chunk.js",
-    "static/css/main.99b4920e.chunk.css",
-    "static/js/main.cdb29bd1.chunk.js"
+    "static/js/2.920bb1c7.chunk.js",
+    "static/css/main.cce2649b.chunk.css",
+    "static/js/main.ec1ede3a.chunk.js"
   ]
 }
