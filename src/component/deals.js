@@ -44,7 +44,7 @@ export default class Deals extends Component {
 
 <Row className="d-flex justify-content-center">
 <Col lg={5}>
-  <img src={item.img} className="logoImg img-fluid"/>
+  <img src={item.logo} className="logoImg img-fluid"/>
 </Col>
   <Col lg={7} className="mt-3  ">
   <Card.Title>{item.title}</Card.Title>
@@ -93,7 +93,7 @@ export default class Deals extends Component {
 </Col>
 <Col lg={3}>
 {/* <button className="ccdbtn mt-3">CCD<i class="bi bi-info-circle"></i> </button> */}
-<Badge className="ccdbtn" style={{marginTop: '1rem'}}>CCD  <span className="iconinfo">
+<Badge className="ccdbtn" style={{marginTop: '1rem'}}>CSOP  <span className="iconinfo">
 <i class="bi bi-info-circle"></i>
 </span></Badge>
 </Col>

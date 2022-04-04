@@ -1,20 +1,26 @@
+import Founder from '../../assets/images/testi-img/img-4.png';
+
 
 import Img1 from '../../assets/images/startup/brewedleaf/thumbnail.jpg';
-// import Img1 from '../../assets/images/startup/brewedleaf/brew2.jpg';
-import Img2 from '../../assets/images/startup/bidwheelz/thumbnail.jpg';
-import Logo from '../../assets/images/testi-img/img-4.png';
-import Founder from '../../assets/images/testi-img/img-4.png';
 import Pitch1 from '../../assets/images/startup/brewedleaf/pitch.pdf'
-import Pitch2 from '../../assets/images/startup/bidwheelz/pitch.pdf'
 import Download1 from '../../assets/images/startup/brewedleaf/duediligence.zip';
+import Logo1 from '../../assets/images/startup/brewedleaf/logo.jpg';
+
+
+
+import Img2 from '../../assets/images/startup/bidwheelz/thumbnail.jpg';
+import Pitch2 from '../../assets/images/startup/bidwheelz/pitch.pdf'
 import Download2 from '../../assets/images/startup/bidwheelz/duediligence.zip';
+import Logo2 from '../../assets/images/startup/bidwheelz/logo.jpg';
+
+
 
 const details = [
     {
         id: '1',
         title: "Brewed Leaf",
         img: Img1,
-        logo: Logo,
+        logo: Logo1,
         description: 'We at Brewed Ventures are on a "mission to disrupt the 200+ years traditional tea industry by reducing the lead cycle time from sourcing to distribution by 88%". Brewed Ventures is a new-age tea brand. We believe in redefining how tea is produced in the country and the world. What we do is gather the freshest leaves from your favourite tea estates from the best tea-growing regions and spread the freshness across the globe. No matter what the preference, from Assam Tea to Imported Teas, we got it all covered. ',
         shortdescription: 'Brewed Ventures aim to deliver the freshest tea from the boutique tea gardens within 1 week.',
         percentageRaised: '20%', 
@@ -76,7 +82,7 @@ const details = [
         id: '2',
         title: "Bid Wheelz",
         img: Img2,
-        logo: Logo,
+        logo: Logo2,
         description: 'Bidwheelz is a B2B and B2C transparent auction aggregator platform which helps people buy and sell vehicles through AI inspection models. The company provides all different types of services related to automobiles such as Sale, Purchase, Insurance, Loan, Servicing and Accessories which a customer would require during their vehicle use under one roof.',
         shortdescription: 'Bidwheelz is a Marketplace for buying and selling resale vehicles through Transparent Live Bidding.',
         percentageRaised: '20%', 

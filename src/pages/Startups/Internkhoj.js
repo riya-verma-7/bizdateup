@@ -186,11 +186,7 @@ const Content = (props) => {
         </thead>
         <tbody>
             <tr>
-<<<<<<< HEAD
-                <td>Investment Amount<br><div class="smalltext text-justify">(Inclusive of GST - 18%)<div class="hoverable"><i class="bi bi-info-circle iconstyle" ></i><div class="infohover text-justify">As CSOP subscription Amount is considered as a revenue<br>item in the company's accounts, 18% GST is applicable </div></div>
-=======
                 <td>Investment Amount<br><div class="smalltext text-justify">(Inclusive of GST - 18%)<div class="hoverable"> <i class="bi bi-info-circle iconstyle" ></i><div class="infohover text-justify">As CSOP subscription Amount is considered as a revenue<br>item in the company's accounts, 18% GST is applicable </div></div>
->>>>>>> 9fca4791ab05bea75c879d498efcbd7453e7af1a
                 </td>
                 
 
